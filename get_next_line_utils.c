@@ -1,6 +1,6 @@
-#inluce "get_next_line.h"
+#include "get_next_line.h"
 
-char	*strchr(char *str, char chr)
+char	*ft_strchr(char *str, char chr)
 {
 	int	i;
 	
@@ -33,12 +33,12 @@ char	*ft_strjoin(char *stash, char *buffer)
 
 	while(*stash)
 	{
-		*(join++) = *(stash++);
+		*(join + i++) = *(stash++);
 	}
 	while(*buffer)
 	{
-		*(join++) = *(buffer);
+		*(join + i++) = *(buffer++);
 	}
-	*join = '\0';
+	*(join + i) = '\0';
 	return (join);
 }
